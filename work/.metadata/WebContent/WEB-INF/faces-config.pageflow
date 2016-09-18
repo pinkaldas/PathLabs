@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14657300275740" configfile="/work/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14657300275740" configfile="/work/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" id="pf14669582391950" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14669582466315 pf14669582466316" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1.jsf" id="pf14669582466317" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14669582466315" path="page1.jsf"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.jsf" id="pf14669582466318" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14669582466316" path="page2.jsf"/>
+  <links id="pf14669582466315" target="pf14669582466317" source="pf14669582391950" outcome="page" fromaction="#{navigationController.processPage1}"/>
+  <links id="pf14669582466316" target="pf14669582466318" source="pf14669582391950" outcome="page" fromaction="#{navigationController.processPage2}"/>
+</pageflow:Pageflow>
