@@ -7,14 +7,19 @@
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
-			<from-action>#{navigationController.processPage1}</from-action>
-			<from-outcome>page</from-outcome>
-			<to-view-id>page1.jsf</to-view-id>
+			<!-- <from-action>#{navigationController.processPage1}</from-action> -->
+			<from-outcome>home</from-outcome>
+			<to-view-id>index.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-action>#{navigationController.processPage2}</from-action>
-			<from-outcome>page</from-outcome>
-			<to-view-id>page2.jsf</to-view-id>
+			<!-- <from-action>#{navigationController.processPage2}</from-action> -->
+			<from-outcome>contacts</from-outcome>
+			<to-view-id>/pages/viewContact.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<!-- <from-action>#{navigationController.processPage2}</from-action> -->
+			<from-outcome>about</from-outcome>
+			<to-view-id>/pages/viewAbout.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

@@ -70,6 +70,14 @@
 			<artifactId>primefaces</artifactId>
 			<version>3.3.1</version>
 		</dependency>
+		
+		<!-- BootsFaces dependency -->		
+		<dependency>
+		    <groupId>net.bootsfaces</groupId>
+		    <artifactId>bootsfaces</artifactId>
+		    <version>1.0.2</version>
+		    <scope>compile</scope>
+		</dependency>
 
 		<!-- Common Dependencies -->
 		<dependency>

@@ -4,17 +4,26 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:b="http://bootsfaces.net/ui"
 	xmlns:rich="http://richfaces.org/rich">
 
 <h:head />
-<h:body>
- 
-    Hello World! This is my first project
+<h:body style="padding: 60px;">
  	<ui:composition template="/template/templatePage.xhtml">
 		<ui:define name="content">
-			<h:form>
-				<h:outputText value="Calendar:" />
-				<rich:calendar />
+			<h:form enctype="multipart/form-data">
+				<br/>
+				<br/>
+				<b:container>
+            <b:jumbotron>
+                <h1>BootsFaces Starter Template</h1>
+                <p> Use this JSF document as a way to quickly start any new project.</p>
+                <p> All you get is this text and a mostly barebone JSF document.</p>
+                <p>
+                    <a href="https://github.com/TheCoder4eu/BootsFaces-examples/blob/master/src/main/webapp/starter_template.xhtml" class="btn btn-lg btn-info">View Page Source »</a>
+                </p>
+            </b:jumbotron>
+        </b:container>
 			</h:form>
 		</ui:define>
 	</ui:composition>

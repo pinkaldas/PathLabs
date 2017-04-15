@@ -4,22 +4,31 @@
  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
  id="WebApp_ID" version="2.5">
  <display-name>JSF Webapp</display-name>
-<context-param>
- <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
- <param-value>server</param-value>
- </context-param>
- <context-param>
- <param-name>javax.faces.CONFIG_FILES</param-name>
- <param-value>/WEB-INF/faces-config.xml</param-value>
- </context-param>
- <context-param>
- <param-name>org.richfaces.SKIN</param-name>
- <param-value>blueSky</param-value>
- </context-param>
- <context-param>
- <param-name>org.richfaces.CONTROL_SKINNING</param-name>
- <param-value>enable</param-value>
- </context-param>
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>server</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.CONFIG_FILES</param-name>
+		<param-value>/WEB-INF/faces-config.xml</param-value>
+	</context-param>
+<!-- 	<context-param>
+		<param-name>org.richfaces.SKIN</param-name>
+		<param-value>blueSky</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.richfaces.CONTROL_SKINNING</param-name>
+		<param-value>enable</param-value>
+	</context-param> -->
+
+	<context-param>
+		<param-name>BootsFaces_USETHEME</param-name>
+		<param-value>default</param-value>
+	</context-param>
+	<context-param>
+		<param-name>BootsFaces_THEME</param-name>
+		<param-value>cerulean</param-value>
+	</context-param>
  
 <listener>
  <listener-class>com.sun.faces.config.ConfigureListener</listener-class>

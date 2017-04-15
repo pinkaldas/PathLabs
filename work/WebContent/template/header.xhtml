@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -5,73 +6,26 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:b="http://bootsfaces.net/ui"
 	xmlns:rich="http://richfaces.org/rich">
-<body>
+<body style="padding: 60px;">
 	<ui:composition>
-		<h:panelGrid columns="2">
-		<h1>
-		<h:outputText value=" PATH&nbsp;&nbsp;INDIA,&nbsp;&nbsp;POLYCLINIC&nbsp;&nbsp; &amp;&nbsp;&nbsp;DIAGNOSTICS"></h:outputText>
-		</h1>
-		<h:panelGrid columns="2"></h:panelGrid>
-		<h:panelGroup/>
-		<h:panelGroup>
-		<h:commandLink value="PATH INDIA POLYCLINIC &amp; DIAGNOSTICS"/>
-		<br/>
-		<h:outputText value="Street No – 85, Community Market,"/>
-		<br/>
-		<h:outputText value="Opposite of Tank No. 2"/>
-		<br/>
-		<h:outputText value="Newtown AA I, Kolkata 700156"/>
-		<br/>
-		</h:panelGroup>		
-		</h:panelGrid>
-		<rich:toolbar height="26px">
-			<rich:menuItem label="Home" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="About" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="Services" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="For Patients" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="For Health Professionals" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="First Visit" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="FAQ's" submitMode="ajax"></rich:menuItem>
-			<rich:menuItem label="Contact" submitMode="ajax"></rich:menuItem>
-			<rich:dropDownMenu mode="ajax">
-				<f:facet name="label">
-					<h:panelGroup>
-						<h:outputText value="File" />
-					</h:panelGroup>
-				</f:facet>
-				<rich:menuItem label="New">
-				</rich:menuItem>
-				<rich:menuItem label="Open" />
-				<rich:menuGroup label="Save As...">
-					<rich:menuItem label="Save" />
-					<rich:menuItem label="Save All">
-						<!-- <f:facet name="icon">
-							<h:graphicImage value="/images/icons/save_all.gif" alt="save_all" />
-						</f:facet> -->
-					</rich:menuItem>
-				</rich:menuGroup>
-				<rich:menuItem label="Close" />
-				<rich:menuSeparator id="menuSeparator11" />
-				<rich:menuItem label="Exit" />
-
-			</rich:dropDownMenu>
-
-			<rich:dropDownMenu mode="ajax">
-				<f:facet name="label">
-					<h:panelGrid cellpadding="0" cellspacing="0" columns="2"
-						style="vertical-align:middle">
-						<h:outputText value="Links" />
-					</h:panelGrid>
-				</f:facet>
-				<rich:menuItem mode="client">
-					<h:outputText value="RichFaces Home Page" />
-				</rich:menuItem>
-				<rich:menuItem mode="client">
-					<h:outputText value="RichFaces Forum" />
-				</rich:menuItem>
-			</rich:dropDownMenu>
-		</rich:toolbar>
+		<h:form>
+		<b:container>
+		<b:navBar brand="PATH INDIA POLYCLINIC &amp; DIAGNOSTICS" fixed="top" inverse="true">
+            <b:navbarLinks>
+                <b:navCommandLink value="Home" action="#{navigationController.moveToHome}" fixed="top" sticky="true"/>
+                <b:navCommandLink value="About" action="#{navigationController.moveToAbout}" fixed="top" sticky="true"/>
+                <b:navCommandLink value="Services" href="#contact" fixed="top" sticky="true"/>
+                <b:navCommandLink value="For Patients" href="#contact" fixed="top" sticky="true"/>
+                <b:navCommandLink value="For Health Professionals" href="#contact" fixed="top" sticky="true"/>
+                <b:navCommandLink value="First Visit" href="#contact" fixed="top" sticky="true"/>
+                <b:navCommandLink value="FAQs" href="#contact" fixed="top" sticky="true"/>
+                <b:navCommandLink value="Contact" action="#{navigationController.moveToContact}" fixed="top" sticky="true"/>
+            </b:navbarLinks>
+        </b:navBar>
+        </b:container>
+        </h:form>
 	</ui:composition>
 </body>
 </html>
